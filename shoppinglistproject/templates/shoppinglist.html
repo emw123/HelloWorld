@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List App</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css\style.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <main>
+    <h1>My Shopping List</h1>
+    <div id = item_list>
+    <form action="/addShoppinglistItem/" method = "post">{% csrf_token %}
+        <input type="text" name="content">
+        <input id = "add_item" type="submit" value="Add Item to Shopping List">
+    </form> 
+    <ul>
+        {% for i in all_items %} 
+        <li>{{i.content}}
+            <form action="/deleteShoppinglistItem/{{i.id}}/" method = "post">{% csrf_token %}
+                <button class="btn"><i class="fa fa-trash"></i></button>
+            </form> 
+        </li>
+        {% endfor %}
+    </ul> 
+    </div>
+    </main>
+    {% block content %}
+    Body content
+    {% endblock %}
+</body>
+</html>

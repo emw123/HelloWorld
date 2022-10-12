@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.py": "python",
+        "map": "cpp",
+        "type_traits": "cpp",
+        "xmemory": "cpp",
+        "xtree": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
+}
