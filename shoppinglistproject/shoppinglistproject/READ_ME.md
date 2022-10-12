@@ -4,7 +4,7 @@ I wrote a web application that creates a simple shopping list dynamically throug
 python, django, html and css. My purpose in writing this software was to familiarize
 myself with django syntax as well as create a simple but useful tool.  
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/gMT77DknyIs)
 
 # Web Pages
 
